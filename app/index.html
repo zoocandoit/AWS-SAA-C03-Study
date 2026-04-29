@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS SAA 문제은행</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <section id="landing-screen" class="landing-screen">
+        <div class="landing-card">
+          <p class="eyebrow">AWS SAA-C03</p>
+          <h1>AWS SAA 문제은행</h1>
+          <p class="landing-copy">
+            노션에서 정리한 `#n/README.md` 문제를 랜덤으로 풀고, 정답과 해설을 바로 복습할 수 있는 로컬 학습 앱입니다.
+          </p>
+          <button id="start-button" class="primary-button start-button" type="button">시작하기</button>
+        </div>
+      </section>
+
+      <div id="app-screen" class="app-screen is-hidden">
+        <header class="hero">
+          <p class="eyebrow">AWS SAA-C03</p>
+          <h1>AWS SAA 문제은행</h1>
+          <p class="hero-copy">
+            시작하기를 누르면 랜덤 문제가 열리고, 세트와 키워드로 범위를 좁혀가며 반복 복습할 수 있습니다.
+          </p>
+          <div class="hero-actions">
+            <button id="random-button" class="ghost-button" type="button">다음 랜덤 문제</button>
+            <button id="restart-button" class="primary-button" type="button">처음으로</button>
+          </div>
+        </header>
+
+        <main class="layout">
+          <aside class="sidebar">
+            <section class="panel stats-panel">
+              <h2>개요</h2>
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <span class="stat-label">세트</span>
+                  <strong id="set-count">0</strong>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">문제</span>
+                  <strong id="question-count">0</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <label class="field-label" for="search-input">검색</label>
+              <input id="search-input" class="search-input" type="search" placeholder="키워드, 서비스명, 정답 검색" />
+            </section>
+
+            <section class="panel">
+              <h2>세트 필터</h2>
+              <div id="set-filters" class="filter-list"></div>
+            </section>
+          </aside>
+
+          <section class="content">
+            <div id="results-summary" class="results-summary"></div>
+            <div id="question-list" class="question-list"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <template id="question-template">
+      <article class="question-card">
+        <div class="question-top">
+          <div>
+            <p class="question-meta"></p>
+            <h3 class="question-title"></h3>
+          </div>
+          <button class="reveal-button" type="button">정답 보기</button>
+        </div>
+
+        <section class="question-section">
+          <h4>문제</h4>
+          <p class="question-prompt"></p>
+        </section>
+
+        <section class="question-section">
+          <h4>선택지</h4>
+          <div class="choice-hint">정답이라고 생각하는 선택지를 체크한 뒤 확인하세요.</div>
+          <ol class="option-list"></ol>
+          <div class="question-actions">
+            <button class="check-answer-button primary-button" type="button" disabled>정답 확인</button>
+            <button class="retry-button ghost-button is-hidden" type="button">다시 풀기</button>
+          </div>
+          <div class="feedback-banner is-hidden"></div>
+        </section>
+
+        <section class="answer-panel is-hidden">
+          <div class="answer-box">
+            <h4>정답</h4>
+            <p class="answer-text"></p>
+          </div>
+          <div class="answer-box">
+            <h4>해설</h4>
+            <p class="explanation-text"></p>
+          </div>
+          <div class="answer-box notes-box">
+            <h4>핵심 메모</h4>
+            <ul class="note-list"></ul>
+          </div>
+          <div class="keyword-row"></div>
+        </section>
+      </article>
+    </template>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
