@@ -60,7 +60,7 @@ http://127.0.0.1:8000
 - [`app/index.html`](C:/Users/hpjoo/Desktop/dev/AWS-SAA-C03-Study/app/index.html): 복습 앱 HTML
 - [`app/styles.css`](C:/Users/hpjoo/Desktop/dev/AWS-SAA-C03-Study/app/styles.css): 복습 앱 스타일
 - [`app/app.js`](C:/Users/hpjoo/Desktop/dev/AWS-SAA-C03-Study/app/app.js): 문제은행 UI 로직
-- [`#1`](C:/Users/hpjoo/Desktop/dev/AWS-SAA-C03-Study/#1) ~ [`#7`](C:/Users/hpjoo/Desktop/dev/AWS-SAA-C03-Study/#7): 문제 세트
+- [`#1`](C:/Users/hpjoo/Desktop/dev/AWS-SAA-C03-Study/#1) ~ [`#8`](C:/Users/hpjoo/Desktop/dev/AWS-SAA-C03-Study/#8): 문제 세트
 
 ## Add More Questions
 
@@ -77,3 +77,4 @@ http://127.0.0.1:8000
 - [`#5`](C:/Users/hpjoo/Desktop/dev/AWS-SAA-C03-Study/#5)
 - [`#6`](C:/Users/hpjoo/Desktop/dev/AWS-SAA-C03-Study/#6)
 - [`#7`](C:/Users/hpjoo/Desktop/dev/AWS-SAA-C03-Study/#7)
+- [`#8`](C:/Users/hpjoo/Desktop/dev/AWS-SAA-C03-Study/#8)
